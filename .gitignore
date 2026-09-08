@@ -1,0 +1,20 @@
+# ROS 2 and Colcon generated files
+build/
+install/
+log/
+
+# Local Python environment
+yolo_venv/
+.venv/
+venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
