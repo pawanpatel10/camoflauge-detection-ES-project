@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+<!-- 
+   REFERENCES:
+    - Gazebo Harmonic Camera Sensor Docs: https://gazebosim.org/docs/harmonic/sensors/
+    - Reference GitHub Repo: https://github.com/ros-simulation/gazebo_ros_pkgs
+
+-->
+
   <!-- Camera Link -->
   <link name="camera_link">
     <visual>
