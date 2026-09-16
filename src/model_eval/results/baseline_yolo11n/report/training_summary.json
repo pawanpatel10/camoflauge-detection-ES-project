@@ -1,0 +1,32 @@
+{
+  "model": "YOLOv11n",
+  "total_epochs": 96,
+  "best_epoch": 83,
+  "best_val_mAP50": 0.67024,
+  "splits": [
+    {
+      "split": "train",
+      "mAP50": 0.8572,
+      "mAP50-95": 0.6083,
+      "precision": 0.8575,
+      "recall": 0.7635,
+      "inference_ms": 4.23
+    },
+    {
+      "split": "val",
+      "mAP50": 0.8675,
+      "mAP50-95": 0.6279,
+      "precision": 0.9626,
+      "recall": 0.7305,
+      "inference_ms": 5.18
+    },
+    {
+      "split": "test",
+      "mAP50": 0.5103,
+      "mAP50-95": 0.2273,
+      "precision": 0.568,
+      "recall": 0.5146,
+      "inference_ms": 4.29
+    }
+  ]
+}

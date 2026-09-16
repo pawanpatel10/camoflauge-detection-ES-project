@@ -1,0 +1,10 @@
+# YOLO Weights
+*.pt
+*.weights
+
+# Python
+__pycache__/
+*.pyc
+
+# Datasets (if downloaded locally)
+*.zip
