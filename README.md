@@ -190,6 +190,21 @@ This enters the `Ubuntu-24.04` WSL distribution and executes the normal Linux se
 | `LIBGL_ALWAYS_SOFTWARE=1 ...` | Run with software OpenGL rendering |
 | `wsl.exe -d Ubuntu-24.04 ...` | Run Linux commands from Windows PowerShell |
 
-## Current Project Status
+## Open-Source Sources and References for the Gazebo Files
 
-The workspace currently builds all five ROS 2 packages. The Gazebo world and its launch file are available. The robot URDF/mesh files, control nodes, perception nodes, camera pipeline, camouflage detector, and complete bringup launch file are still planned work.
+The contents in `src/camo_gazebo` follow standard open-source ROS 2 and Gazebo patterns documented by the official projects, rather than using proprietary or closed-source file content.
+
+- `src/camo_gazebo/CMakeLists.txt`: based on the standard `ament_cmake` package template used in ROS 2 packages. Reference: [ROS 2: Creating a package](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS 2-Package.html), [ament_cmake documentation](https://docs.ros.org/en/jazzy/Guides/Ament-CMake-Documentation.html).
+- 
+- `src/camo_gazebo/package.xml`: follows the ROS 2 package manifest format defined by the package format 3 specification. Reference: [ROS 2 package.xml specification](https://docs.ros.org/en/jazzy/Concepts/Package-Format.html), [ROS 2 package creation docs](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS 2-Package.html).
+- 
+- `src/camo_gazebo/launch/world.launch.py`: pattern is based on the official ROS 2 launch integration for Gazebo from the `ros_gz` project. Reference: [Gazebo ROS 2 integration](https://gazebosim.org/docs/gz-sim/latest/ros2_integration/), [ros_gz Sim launch examples](https://github.com/gazebosim/ros_gz/tree/rolling/ros_gz_sim/launch).
+- 
+- `src/camo_gazebo/worlds/camo_world.sdf`: uses standard SDF world elements (physics, lights, models, materials, plugins) documented in the Gazebo Sim SDF references. Reference: [SDF specification](https://sdformat.org/), [Gazebo Sim world examples](https://github.com/gazebosim/gz-sim/tree/gz-sim9/examples).
+- 
+- `src/camo_gazebo/models/camo_decal/model.config`: conforms to the standard Gazebo model metadata format used by model repositories. Reference: [Gazebo model database / model structure docs](https://classic.gazebosim.org/tutorials?tut=model_resources&cat=build_robot), [Gazebo model examples](https://github.com/osrf/gazebo_models).
+- 
+- `src/camo_gazebo/models/camo_decal/model.sdf`: follows the SDF model structure used in open-source Gazebo examples for static objects, visuals, collisions, and materials. Reference: [SDF model docs](https://sdformat.org/spec), [Gazebo model examples](https://github.com/osrf/gazebo_models).
+
+In other words, the package is assembled from publicly documented ROS 2 and Gazebo conventions, launch patterns, and SDF examples that are openly available in the upstream ecosystem.
+
